@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interagindo com 0 usuário</title>
+  <style>
+    body {
+      background-color: bisque; 
+    }
+    
+    h1 {
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      text-align: center;
+    }
+
+    div {
+      display: flex;
+      justify-content: center;
+      margin-top: 100px;
+    }
+
+    button {
+      padding: 20px 40px;
+    }
+
+    button:hover {
+      background-color: darkblue;
+      color: #fff;
+      transition: 0.3s;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>Trabalhando com dados v1.0</h1>
+  <div>
+    <button onclick="inicio()">Clique para começar</button>
+  </div>
+
+  <script>
+    function inicio() {
+      let nome = window.prompt('Qual é o seu nome?')
+      window.alert(`Olá ${nome}! É um prazer te conhecer!`)
+    }
+  </script>
+</body>
+</html>

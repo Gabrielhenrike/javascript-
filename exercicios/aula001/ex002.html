@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interagindo com um botão</title>
+  <style>
+    body {
+      background-color: bisque;
+    }
+
+    h1 {
+      text-transform: uppercase;
+      font-family: 'Courier New', Courier, monospace;
+      text-align: center;
+    }
+
+    div {
+      display: flex;
+      justify-content: center;
+      margin-top: 100px;
+    }
+
+    button {
+      padding: 20px;
+    }
+
+    button:hover {
+      background-color: skyblue;
+      color: black;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+  </style>
+</head>
+<body>
+  <h1>Interagindo com um botão</h1>
+  <div>
+    <button onclick="clicou()">Clica em mim!</button>
+  </div>
+
+  <script>
+    function clicou() {
+      window.alert('Você clicou no botão')
+    }
+  </script>
+</body>
+</html>

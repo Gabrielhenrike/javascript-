@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Desafio 01</title>
+  <style>
+    body {
+      background-color: bisque;
+      text-align: center;
+    }
+
+    div {
+      display: flex;
+      justify-content: space-around;
+      margin-top: 100px;
+    }
+
+    button {
+      padding: 20px 40px;
+      color: blue;
+    }
+
+    button:hover {
+      background-color: black;
+      color: white;
+      transition: 0.2s;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>Desafio das Mensagens</h1>
+  <div>
+    <button onclick="clicou1()">Botão 1</button>
+    <button onclick="clicou2()">Botão 2</button>
+    <button onclick="clicou3()">Botão 3</button>
+  </div>
+  
+  <script>
+    function clicou1 () {
+      window.alert('Você clicou no 1° botão!')
+    }
+    
+    function clicou2 () {
+      window.alert('Você clicou no 2° botão!')
+    }
+
+    function clicou3 () {
+      window.alert('Você clicou no 3° botão!')
+    }
+  </script>
+</body>
+</html>

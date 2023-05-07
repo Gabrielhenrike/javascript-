@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Sistema de imigração</h1>
+  <form action="POST">
+    <fieldset>
+      <legend>Nacionalidade</legend>
+      <label for="ipais">País</label>
+      <select name="pais" id="ipais">
+        <option value="Brasil">Brasil</option>
+        <option value="Argentina">Argentina</option>
+        <option value="Egito">Egito</option>
+        <option value="Equador">Equador</option>
+        <option value="Espanha">Espanha</option>
+        <option value="França">França</option>
+        <option value="Estados Unidos da América">Estados Unidos da América</option>
+      </select>
+      <input type="button" value="Verificar" onclick="verificar()">
+
+      <div id="res">
+
+      </div>
+
+      <script>
+        function verificar() {
+          var pais = window.document.querySelector('select#ipais')
+
+          var res = window.document.querySelector('div#res')
+
+          var origem = (pais.value)
+
+          res.innerHTML = `<p>Seu país de origem é <strong>${origem}</strong></p>`
+
+          if (origem == 'Brasil') {
+            res.innerHTML += `<p>Você é <strong>Brasileiro</strong></p>`
+          } else {
+            res.innerHTML += `<p>Você é <strong>Estrangeiro</strong></p>`
+          }
+        }
+      </script>
+    </fieldset>
+  </form>
+  </script>
+</body>
+</html>

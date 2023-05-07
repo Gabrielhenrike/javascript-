@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Desafio 08</title>
+  <style>
+    body {
+      background-color: beige;
+    }
+
+    h1 {
+      font-weight: 700;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    button {
+      padding: 20px;
+    }
+
+    button:hover {
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Calcular Desconto</h1>
+  <button onclick="calcular()">Desconto de 10%</button>
+  <section id="resultado">
+    <p>Clique no botão acima para iniciar...</p>
+  </section>
+
+  <script>
+    function calcular() {
+      let nome = window.prompt('Qual é o produto que você está comprando?')
+
+      let preço = Number(window.prompt(`Qual é o preço de ${nome}?`))
+      let res = document.querySelector('section#resultado')
+
+      res.innerHTML = `<h2>Calculando desconto de 10% para ${nome}<h2>`
+
+      res.innerHTML += `<p>O preço orignal era R$ ${preço}</p>`
+      res.innerHTML += `<p>Você acaba de ganhar R$ ${(preço * 10) / 100} de desconto (-10%).</p>`
+      res.innerHTML += `<p>No fim, você vai pagar R$ ${preço} no produto ${nome}.</p>`
+        
+    }
+  </script>
+</body>
+
+</html>

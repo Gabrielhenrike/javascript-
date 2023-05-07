@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Desafio 010</title>
+  <style>
+    body {
+      background-color: bisque;
+    }
+    button {
+      padding: 25px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Resolvendo Bhaskara</h1>
+  <button onclick="calcular()">Calcular</button>
+  <section id="resultado">
+    <p>Considerando uma equação <strong>a</strong>x² + <strong>b</strong>x + <strong>c</strong> = 0, aperte o botão acima para calcular o valor de <strong>Δ</strong></p>
+  </section>
+
+  <script>
+    function calcular() {
+    let na = Number(window.prompt('Qual é o valor de a?'))
+
+    let nb = Number(window.prompt('Qual é o valor de b?'))
+
+    let nc = Number(window.prompt('Qual é o valor de c?'))
+
+    let res = document.querySelector('section#resultado')
+
+    let delta = (nb**2) - (4*na*nc)
+
+    res.innerHTML = '<h2>Resolvendo Bhaskara</h2>'
+
+    res.innerHTML += '<p>A equação atual é <strong>3x² + 6x + 2 = 0</strong></p>'
+  
+
+    res.innerHTML += `<p>O cálculo realizado será <strong>Δ = ${nb}² - 4*${na}*${nc}</p>`
+
+    res.innerHTML += `<p>O valor calculado foi <strong>Δ = ${delta}</strong></p>`
+  }
+  </script>
+</body>
+</html>

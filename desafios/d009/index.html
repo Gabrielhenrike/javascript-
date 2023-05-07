@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Desafio 009</title>
+  <style>
+    body {
+      background-color: bisque;
+    }
+    button {
+      padding: 25px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Reajusta Salarial</h1>
+  <button onclick="reajuste()">Reajustar Salário</button>
+  <section id="resultado">
+    <p>Clique no botão para iniciar.</p>
+  </section>
+
+  <script>
+    function reajuste() {
+      let nome = window.prompt('Qual é o nome do funcionário?')
+
+      let sal = Number(window.prompt(`Qual é o salário de ${nome}?`))
+
+      let porcen = Number(window.prompt(`O salá de ${nome} vai ser reajustado em qual porcentagem?`))
+
+      let res = document.querySelector('section#resultado')
+
+      let valor = (sal * porcen) / 100
+      let novo = sal + valor
+
+      res.innerHTML = `<h2>${nome} recebeu um aumento salarial!</h2>`
+      
+      res.innerHTML += `<p>O salário atual era R$ ${sal}.</p>`
+
+      res.innerHTML += `<p>Com um aumento de ${porcen}%, o salário vai aumentar R$ ${valor} no próximo mês</p>`
+
+      res.innerHTML += `<p>E a partir daí, ${nome} vai passar a ganhar R$ ${novo}.</p>`
+    }
+  </script>
+</body>
+</html>
