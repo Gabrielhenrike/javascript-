@@ -1,0 +1,48 @@
+@charset "UTF-8";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url(imagens/ceu.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+main {
+  background-color: whitesmoke;
+}
+
+h1 {
+ margin: 30px;
+ text-align: center;
+ font-size: 2rem;
+ font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+ color: blueviolet;
+}
+
+section {
+  margin: 40px;
+}
+
+div {
+  margin: 15px;
+}
+
+select {
+  background-color: lightblue;
+}
+
+option {
+  margin: 10px;
+}
+
